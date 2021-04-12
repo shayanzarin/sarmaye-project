@@ -1,0 +1,95 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form action="#" th:action="@{/register}" th:object="${user}" method="post">-->
+<!--    <label for="username">Username</label>-->
+<!--    <input type="text" th:field="*{username}" id="username" placeholder="Username">-->
+<!--    <span th:if="${#fields.hasErrors('username')}"  th:errors="*{username}"></span>-->
+
+<!--    <label for="password">Password</label>-->
+<!--    <input type="password" th:field="*{password}" id="password" placeholder="Password">-->
+<!--    <span th:if="${#fields.hasErrors('password')}"  th:errors="*{password}"></span>-->
+
+<!--    <label for="firstName">firstName</label>-->
+<!--    <input type="text" th:field="*{firstName}" id="firstName" placeholder="firstName">-->
+<!--    <span th:if="${#fields.hasErrors('firstName')}"  th:errors="*{firstName}"></span>-->
+
+<!--    <label for="lastName">lastName</label>-->
+<!--    <input type="text" th:field="*{lastName}" id="lastName" placeholder="lastName">-->
+<!--    <span th:if="${#fields.hasErrors('lastName')}"  th:errors="*{lastName}"></span>-->
+
+<!--    <label for="nationalCode">nationalCode</label>-->
+<!--    <input type="text" th:field="*{nationalCode}" id="nationalCode" placeholder="nationalCode">-->
+<!--    <span th:if="${#fields.hasErrors('nationalCode')}"  th:errors="*{nationalCode}"></span>-->
+
+<!--    <label for="phoneNum">phoneNumber</label>-->
+<!--    <input type="text" th:field="*{phoneNum}" id="phoneNum" placeholder="phoneNumber">-->
+<!--    <span th:if="${#fields.hasErrors('phoneNum')}"  th:errors="*{phoneNum}"></span>-->
+
+<!--    <label for="email">email</label>-->
+<!--    <input type="email" th:field="*{email}" id="email" placeholder="email">-->
+<!--    <span th:if="${#fields.hasErrors('email')}"  th:errors="*{email}"></span>-->
+
+<!--    <input type="submit" value="Add User">-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" href="/login/signup.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" >
+    <title>Sign in</title>
+</head>
+
+<body>
+<div class="main">
+    <p class="sign" align="center">ثبت نام</p>
+    <div th:if="${param.error}">
+        <div class="sign" خطا>
+            خطا
+        </div>
+    </div>
+
+    <form action="#" th:action="@{/register}" th:object="${user}" method="post" class="form1">
+
+
+            <input type="text" class="un " th:field="*{username}" id="username" placeholder="Username">
+            <span th:if="${#fields.hasErrors('username')}"  th:errors="*{username}"></span>
+
+            <input type="password" class="pass" th:field="*{password}" id="password" placeholder="Password">
+            <span th:if="${#fields.hasErrors('password')}"  th:errors="*{password}"></span>
+
+            <input type="text" class="un " th:field="*{firstName}" id="firstName" placeholder="firstName">
+            <span th:if="${#fields.hasErrors('firstName')}"  th:errors="*{firstName}"></span>
+
+            <input type="text" class="un " th:field="*{lastName}" id="lastName" placeholder="lastName">
+            <span th:if="${#fields.hasErrors('lastName')}"  th:errors="*{lastName}"></span>
+
+            <input type="text" class="un " th:field="*{nationalCode}" id="nationalCode" placeholder="nationalCode">
+            <span th:if="${#fields.hasErrors('nationalCode')}"  th:errors="*{nationalCode}"></span>
+
+            <input type="text" class="un " th:field="*{phoneNum}" id="phoneNum" placeholder="phoneNumber">
+            <span th:if="${#fields.hasErrors('phoneNum')}"  th:errors="*{phoneNum}"></span>
+
+            <input type="email" class="un " th:field="*{email}" id="email" placeholder="email">
+            <span th:if="${#fields.hasErrors('email')}"  th:errors="*{email}"></span>
+
+        <input class="submit" align="center" type="submit" > </input>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>
+

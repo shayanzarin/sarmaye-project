@@ -1,0 +1,44 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<header>
+    <link rel="stylesheet" href="/css/profile.css">
+    <h1>ليست كاربران</h1>
+</header>
+<article>
+    <h2><a href="/assistant/home">back home</a></h2>
+
+    <div th:switch="${users}" >
+        <table class="vitamins">
+            <thead>
+            <tr>
+                <th>يوزرنيم</th>
+                <th>نقش</th>
+                <th>وضعيت</th>
+                <th>تغيير وضعيت</th>
+                <th>ويرايش</th>
+            </tr>
+            </thead>
+            <!--        <tfoot>-->
+            <!--        <tr>-->
+            <!--            <td colspan="4">-->
+            <!--                <p><strong>mcg</strong> stands for micrograms. <strong>IU</strong> stands for International Units</p>-->
+
+            <!--            </td>-->
+            <!--        </tr>-->
+            <!--        </tfoot>-->
+            <tbody>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.username}"></td>
+                <td th:text="${user.roles}"></td>
+                <td th:text="${user.status}"></td>
+                <td> <a th:href="@{/admin/change-status/{id}(id=${user.id})}">تغيروضعيت</a> </td>
+                <td> <a th:href="@{/user/edit/{id}(id=${user.id})}">ويرايش كاربر</a> </td>
+
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</article>
+</html>

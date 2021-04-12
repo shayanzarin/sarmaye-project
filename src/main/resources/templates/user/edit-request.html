@@ -1,0 +1,35 @@
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+
+<head>
+    <link rel="stylesheet" href="/login/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Sign in</title>
+</head>
+
+<body>
+<div class="main">
+    <p class="sign" align="center">ويرايش درخواست</p>
+    <form action="#"
+          th:action="@{/user/update-request/{id}(id=${request.id})}"
+          th:object="${request}"
+          method="post" class="form1">
+
+        <select name="subject" th:field="*{subject}"  class="un">
+            <option th:each="subjectOpt : ${T(com.example.sarmaye.models.Subject).values()}"
+                    th:value="${subjectOpt}" th:text="${subjectOpt}"></option>
+        </select>
+
+        <input type="text" class="un " th:field="*{description}" id="description" placeholder="description">
+        <span th:if="${#fields.hasErrors('description')}"  th:errors="*{description}"></span>
+
+        <input class="submit" align="center" type="submit" > </input>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>

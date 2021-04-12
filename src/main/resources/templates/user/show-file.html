@@ -1,0 +1,39 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<header>
+     <link rel="stylesheet" href="/css/profile.css">
+    <h1>فايل ها</h1>
+</header>
+<article>
+    <h2><a href="/user/home">بازگشت به خانه</a></h2>
+
+    <div th:switch="${files}" >
+        <table class="vitamins">
+            <thead>
+            <tr>
+                <th>name</th>
+                <th>size</th>
+                <th>download</th>
+            </tr>
+            </thead>
+            <!--        <tfoot>-->
+            <!--        <tr>-->
+            <!--            <td colspan="4">-->
+            <!--                <p><strong>mcg</strong> stands for micrograms. <strong>IU</strong> stands for International Units</p>-->
+
+            <!--            </td>-->
+            <!--        </tr>-->
+            <!--        </tfoot>-->
+            <tbody>
+            <tr th:each="file : ${files}">
+                <td th:text="${file.name}"></td>
+                <td th:text="${file.size}"></td>
+                <td > <a  th:href="@{/user/download-file/{id}(id=${file.id})}">دانلود</a> </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</article>
+</html>

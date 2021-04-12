@@ -1,0 +1,48 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<header>
+    <link rel="stylesheet" href="/css/profile.css">
+    <h1>درخواست ها</h1>
+</header>
+<article>
+    <h2><a href="/assistant/home">back home</a></h2>
+
+    <div th:switch="${requestList}" >
+        <table class="vitamins">
+            <thead>
+            <tr>
+                <th>يوزرنيم</th>
+                <th>شرح</th>
+                <th>موضوع</th>
+                <th>وضعيت</th>
+                <th>پاسخ</th>
+                <th>فايل</th>
+                <th>پاسخ بده</th>
+            </tr>
+            </thead>
+            <!--        <tfoot>-->
+            <!--        <tr>-->
+            <!--            <td colspan="4">-->
+            <!--                <p><strong>mcg</strong> stands for micrograms. <strong>IU</strong> stands for International Units</p>-->
+
+            <!--            </td>-->
+            <!--        </tr>-->
+            <!--        </tfoot>-->
+            <tbody>
+            <tr th:each="request : ${requestList}">
+                <td th:text="${request.username}"></td>
+                <td th:text="${request.description}"></td>
+                <td th:text="${request.subject}"></td>
+                <td th:text="${request.status}"></td>
+                <td th:text="${request.answer}"></td>
+                <td> <a th:href="@{/assistant/show-file/{id}(id=${request.id})}">پاسخ بده</a> </td>
+                <td> <a th:href="@{/assistant/answer/{id}(id=${request.id})}">پاسخ بده</a> </td>
+
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</article>
+</html>

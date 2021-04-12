@@ -1,0 +1,48 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<html lang="en" xmlns:th="http://www.thymleaf.org">-->
+
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h2>login error. try again</h2>-->
+<!--<form th:action="@{/login}" method="post">-->
+<!--    <label for="username">Username: </label>-->
+<!--    <input type="text" id="username" name="username"/>-->
+<!--    <label for="password">Password: </label>-->
+<!--    <input type="password" id="password" name="password"/>-->
+<!--    <input type="submit" value="Login" />-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" href="/login/style.css">
+    <link  rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" >
+    <title>Sign in</title>
+</head>
+
+<body>
+<div class="main">
+    <p class="sign" align="center">خظاي ورود!</p>
+<!--    <span th:if="${error != null}" class="sign" align="center">شما غيرفعال شديد!</span>-->
+    <form th:action="@{/login}" method="post" class="form1">
+        <input class="un " type="text" id="username" name="username" align="center" placeholder="Username ">
+        <input class="pass" type="password" id="password" name="password" align="center" placeholder="Password">
+        <input class="submit" align="center" type="submit" > </input>
+        <p class="forgot" align="center"> <a href="/signup">حساب نداري؟</a>  </p>
+    </form>
+
+</div>
+
+</body>
+
+</html>

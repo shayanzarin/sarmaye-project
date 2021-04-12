@@ -1,0 +1,135 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Home</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<h1>User home</h1><br>-->
+
+<!--<div th:opject="${user}">-->
+<!--    <span style="white-space: nowrap;">-->
+<!--        <h2 th:text="${'welcome ' + user.username}"></h2>-->
+<!--    </span>-->
+<!--</div>-->
+
+<!--<br>-->
+<!--<a href="/user/show">show user</a><br>-->
+<!--&lt;!&ndash;<a href="/signup">sign up</a><br>&ndash;&gt;-->
+<!--<a href="/logout">logout</a>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+<!DOCTYPE html>
+
+<html dir="rtl" lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>user home</title>
+    <meta name="description" content="This is a free Bootstrap landing page theme created for BootstrapZero. Feature video background and one page design." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<!--<nav id="topNav" class="navbar navbar-default navbar-fixed-top">-->
+<!--    <div class="container-fluid">-->
+<!--        <div class="navbar-header">-->
+<!--            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">-->
+<!--                <span class="sr-only">Toggle navigation</span>-->
+<!--                <span class="icon-bar"></span>-->
+<!--                <span class="icon-bar"></span>-->
+<!--                <span class="icon-bar"></span>-->
+<!--            </button>-->
+<!--            <a class="navbar-brand page-scroll" href="#first"><i class="ion-ios-analytics-outline"></i> Landing Zero</a>-->
+<!--        </div>-->
+<!--        <div class="navbar-collapse collapse" id="bs-navbar">-->
+<!--            <ul class="nav navbar-nav">-->
+<!--                <li>-->
+<!--                    <a class="page-scroll" href="#one">Intro</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a class="page-scroll" href="#two">Highlights</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a class="page-scroll" href="#three">Gallery</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a class="page-scroll" href="#four">Features</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a class="page-scroll" href="#last">Contact</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--            <ul class="nav navbar-nav navbar-right">-->
+<!--                <li>-->
+<!--                    <a class="page-scroll" data-toggle="modal" title="A free Bootstrap video landing theme" href="#aboutModal">About</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+<header id="first">
+    <div class="header-content">
+        <div class="inner">
+            <h1 class="cursive"><div th:opject="${user}">
+    <span style="white-space: nowrap;">
+        <div sec:authorize="hasRole('USER')">
+                    <h2 th:text="${'welcome ' + user.username}"></h2>
+        </div>
+
+        <div sec:authorize="hasRole('ASSISTANT')">
+            <h2 th:text="${'welcome assistant ' + user.username}"></h2>
+
+        </div>
+
+                <div sec:authorize="hasRole('ADMIN')">
+            <h2 th:text="${'welcome admin '}"></h2>
+
+        </div>
+
+    </span>
+            </div></h1>
+<!--            <h4>A free landing page theme with video background</h4>-->
+            <hr>
+            <div sec:authorize="hasRole('USER')">
+            <a href="/user/show" id="toggleVideo"  class="btn btn-primary btn-xl">پروفايل</a> &nbsp;
+            <a href="/user/add-request" class="btn btn-primary btn-xl page-scroll">ثبت درخواست</a>
+            <a href="/user/show-request" class="btn btn-primary btn-xl page-scroll">مشاهده درخواست ها</a>
+                <a href="/logout" class="btn btn-primary btn-xl page-scroll">خروج</a>
+            </div>
+
+            <div sec:authorize="hasRole('ASSISTANT')">
+            <a href="/assistant/show-request" class="btn btn-primary btn-xl page-scroll">مشاهده درخواست ها</a>
+                <a href="/logout" class="btn btn-primary btn-xl page-scroll">خروج</a>
+            </div>
+
+            <div sec:authorize="hasRole('ADMIN')">
+                <a href="/assistant/show-request" class="btn btn-primary btn-xl page-scroll">مشاهده درخواست ها</a>
+                <a href="/admin/show-users" class="btn btn-primary btn-xl page-scroll">مشاهده تمام كاربران</a>
+                <a href="/admin/add-assistant" class="btn btn-primary btn-xl page-scroll">اضافه كردن دستيار</a>
+                <a href="/logout" class="btn btn-primary btn-xl page-scroll">خروج</a>
+            </div>
+
+<!--            <a href="/logout" class="btn btn-primary btn-xl page-scroll">خروج</a>-->
+        </div>
+    </div>
+</header>
+
+<!--scripts loaded here from cdn for performance -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script src="/js/scripts.js"></script>
+</body>
+</html>

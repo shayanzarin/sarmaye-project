@@ -1,0 +1,95 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Profile</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div th:opject="${user}" >-->
+<!--    <table border="5px">-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th>Id</th>-->
+<!--            <th>UserName</th>-->
+<!--            <th>FirstName</th>-->
+<!--            <th>LastName</th>-->
+<!--            <th>NationalCode</th>-->
+<!--            <th>PhoneNumber</th>-->
+<!--            <th>Email</th>-->
+<!--            <th>Edit</th>-->
+<!--            <th>Delete</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--            <td th:text="${user.id}"></td>-->
+<!--            <td th:text="${user.username}"></td>-->
+<!--            <td th:text="${user.firstName}"></td>-->
+<!--            <td th:text="${user.lastName}"></td>-->
+<!--            <td th:text="${user.nationalCode}"></td>-->
+<!--            <td th:text="${user.phoneNum}"></td>-->
+<!--            <td th:text="${user.email}"></td>-->
+<!--            <td> <a th:href="@{/user/edit/{id}(id=${user.id})}">edit</a> </td>-->
+<!--            <td> <a th:href="@{/user/delete/{id}(id=${user.id})}">delete</a></td>-->
+<!--        </tbody>-->
+<!--    </table>-->
+<!--    <br>-->
+<!--    -->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!--------------------------->
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<header>
+    <link rel="stylesheet" href="/css/profile.css">
+    <h1>پروفایل</h1>
+</header>
+<article>
+    <h2><a href="/user/home">back home</a></h2>
+
+    <div th:opject="${user}" >
+    <table class="vitamins">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>UserName</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>NationalCode</th>
+            <th>PhoneNumber</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+<!--        <tfoot>-->
+<!--        <tr>-->
+<!--            <td colspan="4">-->
+<!--                <p><strong>mcg</strong> stands for micrograms. <strong>IU</strong> stands for International Units</p>-->
+
+<!--            </td>-->
+<!--        </tr>-->
+<!--        </tfoot>-->
+        <tbody>
+        <tr>
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.firstName}"></td>
+            <td th:text="${user.lastName}"></td>
+            <td th:text="${user.nationalCode}"></td>
+            <td th:text="${user.phoneNum}"></td>
+            <td th:text="${user.email}"></td>
+            <td> <a th:href="@{/user/edit/{id}(id=${user.id})}">edit</a> </td>
+            <td> <a th:href="@{/user/delete/{id}(id=${user.id})}">delete</a></td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    </div>
+</article>
+</html>

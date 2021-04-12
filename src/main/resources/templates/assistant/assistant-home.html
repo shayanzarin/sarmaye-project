@@ -1,0 +1,105 @@
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html lang="en">&ndash;&gt;-->
+<!--&lt;!&ndash;<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta charset="UTF-8">&ndash;&gt;-->
+<!--&lt;!&ndash;    <title>Home</title>&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<h1>User home</h1><br>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<div th:opject="${user}">&ndash;&gt;-->
+<!--&lt;!&ndash;    <span style="white-space: nowrap;">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h2 th:text="${'welcome ' + user.username}"></h2>&ndash;&gt;-->
+<!--&lt;!&ndash;    </span>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<br>&ndash;&gt;-->
+<!--&lt;!&ndash;<a href="/user/show">show user</a><br>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<a href="/signup">sign up</a><br>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<a href="/logout">logout</a>&ndash;&gt;-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <title>Landing Zero Free Bootstrap Theme with Video</title>-->
+<!--    <meta name="description" content="This is a free Bootstrap landing page theme created for BootstrapZero. Feature video background and one page design." />-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <meta name="generator" content="Codeply">-->
+<!--    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />-->
+<!--    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />-->
+<!--    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />-->
+<!--    <link rel="stylesheet" href="/css/styles.css" />-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash;<nav id="topNav" class="navbar navbar-default navbar-fixed-top">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="container-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="navbar-header">&ndash;&gt;-->
+<!--&lt;!&ndash;            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">&ndash;&gt;-->
+<!--&lt;!&ndash;                <span class="sr-only">Toggle navigation</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                <span class="icon-bar"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                <span class="icon-bar"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                <span class="icon-bar"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;            </button>&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="navbar-brand page-scroll" href="#first"><i class="ion-ios-analytics-outline"></i> Landing Zero</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="navbar-collapse collapse" id="bs-navbar">&ndash;&gt;-->
+<!--&lt;!&ndash;            <ul class="nav navbar-nav">&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="page-scroll" href="#one">Intro</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="page-scroll" href="#two">Highlights</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="page-scroll" href="#three">Gallery</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="page-scroll" href="#four">Features</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="page-scroll" href="#last">Contact</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                </li>&ndash;&gt;-->
+<!--&lt;!&ndash;            </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;            <ul class="nav navbar-nav navbar-right">&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="page-scroll" data-toggle="modal" title="A free Bootstrap video landing theme" href="#aboutModal">About</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                </li>&ndash;&gt;-->
+<!--&lt;!&ndash;            </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</nav>&ndash;&gt;-->
+<!--<header id="first">-->
+<!--    <div class="header-content">-->
+<!--        <div class="inner">-->
+<!--            <h1 class="cursive"><div th:opject="${user}">-->
+<!--    <span style="white-space: nowrap;">-->
+<!--        <h2 th:text="${'welcome assistant ' + user.username}"></h2>-->
+<!--    </span>-->
+<!--            </div></h1>-->
+<!--&lt;!&ndash;            <h4>A free landing page theme with video background</h4>&ndash;&gt;-->
+<!--            <hr>-->
+<!--&lt;!&ndash;            <a href="/user/show" id="toggleVideo"  class="btn btn-primary btn-xl">پروفايل</a> &nbsp;&ndash;&gt;-->
+<!--&lt;!&ndash;            <a href="/user/addRequest" class="btn btn-primary btn-xl page-scroll">ثبت درخواست</a>&ndash;&gt;-->
+<!--            <a href="/assistant/showRequest" class="btn btn-primary btn-xl page-scroll">مشاهده درخواست ها</a>-->
+<!--            <a href="/logout" class="btn btn-primary btn-xl page-scroll">خروج</a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</header>-->
+
+<!--&lt;!&ndash;scripts loaded here from cdn for performance &ndash;&gt;-->
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>-->
+<!--<script src="/js/scripts.js"></script>-->
+<!--</body>-->
+<!--</html>-->
